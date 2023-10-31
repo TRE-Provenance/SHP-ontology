@@ -1,0 +1,623 @@
+<https://w3id.org/shp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/shp> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov-o-20130430> .
+<https://w3id.org/shp> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/shp> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/iahs/people/profiles/jessicabutler> .
+<https://w3id.org/shp> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/ncs/profiles/milan.markovic/> .
+<https://w3id.org/shp> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/people/bernhard.scheliga/> .
+<https://w3id.org/shp> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/people/helen.rowlands/> .
+<https://w3id.org/shp> <http://purl.org/dc/terms/description> "An ontology to describe provenance of data anonymization workflows (i.e., data linkage) in high security research environments such as the Scottish Safe Haven."@en .
+<https://w3id.org/shp> <http://purl.org/dc/terms/issued> "2023-11-01"@en .
+<https://w3id.org/shp> <http://purl.org/dc/terms/modified> "2023-11-01"@en .
+<https://w3id.org/shp> <http://purl.org/dc/terms/rights> "Copyright 2023 University of Aberdeen" .
+<https://w3id.org/shp> <http://purl.org/dc/terms/title> "The Safe Haven Provenance (SHP) Ontology"@en .
+<https://w3id.org/shp> <http://purl.org/vocab/vann/preferredNamespacePrefix> "shp" .
+<https://w3id.org/shp> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/shp#" .
+<https://w3id.org/shp> <http://www.w3.org/2000/01/rdf-schema#label> "The SHP Ontology"@en .
+<https://w3id.org/shp> <http://www.w3.org/2002/07/owl#versionInfo> "0.2"^^<http://www.w3.org/2001/XMLSchema#double> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/shp#constraint
+<https://w3id.org/shp#constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/shp#constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking Data Source Specification with a Variable Constraint related to one of the variables defined in this specification." .
+<https://w3id.org/shp#constraint> <http://www.w3.org/2000/01/rdf-schema#label> "constraint" .
+# 
+# https://w3id.org/shp#dataSource
+<https://w3id.org/shp#dataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/shp#dataSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#DataSpecificationFile> .
+<https://w3id.org/shp#dataSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/shp#DataSourceSpecification> .
+<https://w3id.org/shp#dataSource> <http://www.w3.org/2000/01/rdf-schema#comment> "A property for linking data sources to corresponding data plans." .
+<https://w3id.org/shp#dataSource> <http://www.w3.org/2000/01/rdf-schema#label> "data source" .
+# 
+# https://w3id.org/shp#requestedVariables
+<https://w3id.org/shp#requestedVariables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/shp#requestedVariables> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#DataSourceSpecification> .
+<https://w3id.org/shp#requestedVariables> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/shp#RequestedVariables> .
+<https://w3id.org/shp#requestedVariables> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking Data Source Specification with the collection containing describtion of variables requested by a researcher." .
+<https://w3id.org/shp#requestedVariables> <http://www.w3.org/2000/01/rdf-schema#label> "requested variables" .
+# 
+# https://w3id.org/shp#targetDataset
+<https://w3id.org/shp#targetDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/shp#targetDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#EntityCharacteristic> .
+<https://w3id.org/shp#targetDataset> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/shp#DataSet> .
+<https://w3id.org/shp#targetDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking Entity Characteristic to the particular Dataset it describes." .
+<https://w3id.org/shp#targetDataset> <http://www.w3.org/2000/01/rdf-schema#label> "target dataset" .
+# 
+# https://w3id.org/shp#targetFeature
+<https://w3id.org/shp#targetFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/shp#targetFeature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#EntityCharacteristic> .
+<https://w3id.org/shp#targetFeature> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#VariableConstraint> .
+<https://w3id.org/shp#targetFeature> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/shp#Variable> .
+<https://w3id.org/shp#targetFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking Entitiy Characteristic or Variable Constraint to a specific variable to indicate that characteristics or constriants described influence this variable." .
+<https://w3id.org/shp#targetFeature> <http://www.w3.org/2000/01/rdf-schema#label> "target feature" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/shp#abbreviation
+<https://w3id.org/shp#abbreviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#Database> .
+<https://w3id.org/shp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#comment> "Short name of source database" .
+<https://w3id.org/shp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#label> "abbreviation" .
+# 
+# https://w3id.org/shp#cohortMembersLinked
+<https://w3id.org/shp#cohortMembersLinked> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#cohortMembersLinked> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#DataSet> .
+<https://w3id.org/shp#cohortMembersLinked> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/shp#cohortMembersLinked> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of cohort members successfully linked" .
+<https://w3id.org/shp#cohortMembersLinked> <http://www.w3.org/2000/01/rdf-schema#label> "cohort members linked" .
+# 
+# https://w3id.org/shp#cohortMembersNotLinked
+<https://w3id.org/shp#cohortMembersNotLinked> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#cohortMembersNotLinked> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#DataSet> .
+<https://w3id.org/shp#cohortMembersNotLinked> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/shp#cohortMembersNotLinked> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of cohort members not linked" .
+<https://w3id.org/shp#cohortMembersNotLinked> <http://www.w3.org/2000/01/rdf-schema#label> "cohort members not linked" .
+# 
+# https://w3id.org/shp#cohortMembersWithInvalidLinkageVariable
+<https://w3id.org/shp#cohortMembersWithInvalidLinkageVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#cohortMembersWithInvalidLinkageVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#DataSet> .
+<https://w3id.org/shp#cohortMembersWithInvalidLinkageVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/shp#cohortMembersWithInvalidLinkageVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of eligible cohort members with an incorrect or missing identifier as linkage variable" .
+<https://w3id.org/shp#cohortMembersWithInvalidLinkageVariable> <http://www.w3.org/2000/01/rdf-schema#label> "cohort members with invalid linkage variable" .
+# 
+# https://w3id.org/shp#cohortSize
+<https://w3id.org/shp#cohortSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#cohortSize> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#UidMapping> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#cohortSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/shp#cohortSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Total number of people in the cohort. This number was either determined by the analyst before the before the data linkage process or was provided by the researcher." .
+<https://w3id.org/shp#cohortSize> <http://www.w3.org/2000/01/rdf-schema#label> "cohort size" .
+# 
+# https://w3id.org/shp#cohortSpecification
+<https://w3id.org/shp#cohortSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#cohortSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataLinkagePlan> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#cohortSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#cohortSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Data linkage Plan: The cohort specification based on the researchers criteria to answer their research question.\n\nDataset: How the Lead Analyst defined the cohort" .
+<https://w3id.org/shp#cohortSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "cohort specification" .
+# 
+# https://w3id.org/shp#contact
+<https://w3id.org/shp#contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#contact> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#Database> .
+<https://w3id.org/shp#contact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#contact> <http://www.w3.org/2000/01/rdf-schema#comment> "Point of contact for questions about source database" .
+<https://w3id.org/shp#contact> <http://www.w3.org/2000/01/rdf-schema#label> "contact" .
+# 
+# https://w3id.org/shp#contexualInformationLink
+<https://w3id.org/shp#contexualInformationLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#contexualInformationLink> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#Database> .
+<https://w3id.org/shp#contexualInformationLink> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/shp#contexualInformationLink> <http://www.w3.org/2000/01/rdf-schema#comment> "Web URL or folder path that point to the contextual information of the source data such as e.g. Metadata, variable definition, collection methods etc." .
+<https://w3id.org/shp#contexualInformationLink> <http://www.w3.org/2000/01/rdf-schema#label> "contextual information link" .
+# 
+# https://w3id.org/shp#dataCustodian
+<https://w3id.org/shp#dataCustodian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#dataCustodian> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#Database> .
+<https://w3id.org/shp#dataCustodian> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#dataCustodian> <http://www.w3.org/2000/01/rdf-schema#comment> "The individual responsible for the safe custody, transfer, storage of the data and database structure." .
+<https://w3id.org/shp#dataCustodian> <http://www.w3.org/2000/01/rdf-schema#label> "data custodian" .
+# 
+# https://w3id.org/shp#dataType
+<https://w3id.org/shp#dataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#dataType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#EntityCharacteristic> .
+<https://w3id.org/shp#dataType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#Variable> .
+<https://w3id.org/shp#dataType> <http://www.w3.org/2000/01/rdf-schema#comment> "A data type associated with some values described by Entity Characteristic or an expected type of values corresponding to specific Variable" .
+<https://w3id.org/shp#dataType> <http://www.w3.org/2000/01/rdf-schema#label> "dataType" .
+# 
+# https://w3id.org/shp#databaseName
+<https://w3id.org/shp#databaseName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#databaseName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#Database> .
+<https://w3id.org/shp#databaseName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#databaseName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of source database" .
+<https://w3id.org/shp#databaseName> <http://www.w3.org/2000/01/rdf-schema#label> "database name" .
+# 
+# https://w3id.org/shp#extractedDataset
+<https://w3id.org/shp#extractedDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#extractedDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#DatasetRelease> .
+<https://w3id.org/shp#extractedDataset> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#extractedDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "List of all datasets extracted and released into the project folder of the researcher" .
+<https://w3id.org/shp#extractedDataset> <http://www.w3.org/2000/01/rdf-schema#label> "extracted datasets" .
+# 
+# https://w3id.org/shp#extractedVariables
+<https://w3id.org/shp#extractedVariables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#extractedVariables> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#DataSet> .
+<https://w3id.org/shp#extractedVariables> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#extractedVariables> <http://www.w3.org/2000/01/rdf-schema#comment> "List of variables extracted from the database to form the dataset" .
+<https://w3id.org/shp#extractedVariables> <http://www.w3.org/2000/01/rdf-schema#label> "extracted variables" .
+# 
+# https://w3id.org/shp#fileName
+<https://w3id.org/shp#fileName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#fileName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/shp#fileName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#fileName> <http://www.w3.org/2000/01/rdf-schema#comment> "Assigned file name(s) representing the particular entity through the data workflow and provenance trace from data ingress to the release of data to the researcher in their project folder within the TRE." .
+<https://w3id.org/shp#fileName> <http://www.w3.org/2000/01/rdf-schema#label> "file name" .
+# 
+# https://w3id.org/shp#hash
+<https://w3id.org/shp#hash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#hash> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/shp#hash> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/shp#hash> <http://www.w3.org/2000/01/rdf-schema#comment> "A hash value of a specific object (e.g., a dataset contained in a file)." .
+<https://w3id.org/shp#hash> <http://www.w3.org/2000/01/rdf-schema#label> "hash" .
+# 
+# https://w3id.org/shp#lastKnownUpdate
+<https://w3id.org/shp#lastKnownUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#lastKnownUpdate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#Database> .
+<https://w3id.org/shp#lastKnownUpdate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/shp#lastKnownUpdate> <http://www.w3.org/2000/01/rdf-schema#comment> "When was the last known update of the database, before it was used to generate the dataset for the research project" .
+<https://w3id.org/shp#lastKnownUpdate> <http://www.w3.org/2000/01/rdf-schema#label> "last known update" .
+# 
+# https://w3id.org/shp#linkageVariable
+<https://w3id.org/shp#linkageVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#linkageVariable> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataLinkagePlan> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#linkageVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#linkageVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable used for linkage to source dataset" .
+<https://w3id.org/shp#linkageVariable> <http://www.w3.org/2000/01/rdf-schema#label> "linkage variable" .
+# 
+# https://w3id.org/shp#max_value
+<https://w3id.org/shp#max_value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#max_value> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#EntityCharacteristic> .
+<https://w3id.org/shp#max_value> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#VariableConstraint> .
+<https://w3id.org/shp#max_value> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum value found in the structure represented by the Entity Characteristic. For example, if an entitiy characteristic might represent a subset of numerical entries, dataes, strings in a dataset corresponding to a specific variable. A min value would represent the largest  entry within such subset of entries." .
+<https://w3id.org/shp#max_value> <http://www.w3.org/2000/01/rdf-schema#label> "max value" .
+# 
+# https://w3id.org/shp#minValue
+<https://w3id.org/shp#minValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#minValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#EntityCharacteristic> .
+<https://w3id.org/shp#minValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#VariableConstraint> .
+<https://w3id.org/shp#minValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The minimum value found in the structure represented by the Entity Characteristic. For example, if an entitiy characteristic might represent a subset of numerical entries, dataes, strings in a dataset corresponding to a specific variable. A min value would represent the smallest  entry within such subset of entries." .
+<https://w3id.org/shp#minValue> <http://www.w3.org/2000/01/rdf-schema#label> "min value" .
+# 
+# https://w3id.org/shp#mostRecentRecordDate
+<https://w3id.org/shp#mostRecentRecordDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#mostRecentRecordDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#Database> .
+<https://w3id.org/shp#mostRecentRecordDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/shp#mostRecentRecordDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of the most recent record in database." .
+<https://w3id.org/shp#mostRecentRecordDate> <http://www.w3.org/2000/01/rdf-schema#label> "most recent record date" .
+# 
+# https://w3id.org/shp#notNull
+<https://w3id.org/shp#notNull> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#notNull> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#EntityCharacteristic> .
+<https://w3id.org/shp#notNull> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/shp#notNull> <http://www.w3.org/2000/01/rdf-schema#comment> "A number of entries represented by the Entity Characteristic where the value is not null" .
+<https://w3id.org/shp#notNull> <http://www.w3.org/2000/01/rdf-schema#label> "not null" .
+# 
+# https://w3id.org/shp#notNullPct
+<https://w3id.org/shp#notNullPct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#notNullPct> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#EntityCharacteristic> .
+<https://w3id.org/shp#notNullPct> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/shp#notNullPct> <http://www.w3.org/2000/01/rdf-schema#comment> "A percentage of non-null entries represented by the Entity Characteristic" .
+<https://w3id.org/shp#notNullPct> <http://www.w3.org/2000/01/rdf-schema#label> "not null pct" .
+# 
+# https://w3id.org/shp#oldestRecordDate
+<https://w3id.org/shp#oldestRecordDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#oldestRecordDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#Database> .
+<https://w3id.org/shp#oldestRecordDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/shp#oldestRecordDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time of the oldest record in the database" .
+<https://w3id.org/shp#oldestRecordDate> <http://www.w3.org/2000/01/rdf-schema#label> "oldest record date" .
+# 
+# https://w3id.org/shp#projectId
+<https://w3id.org/shp#projectId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#projectId> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#TreProject> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#ProjectIdToStudyIdTable> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataLinkagePlan> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#projectId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#projectId> <http://www.w3.org/2000/01/rdf-schema#comment> "Project IDs are assigned to each project by the Research Coordinator." .
+<https://w3id.org/shp#projectId> <http://www.w3.org/2000/01/rdf-schema#label> "project id" .
+# 
+# https://w3id.org/shp#resultOfCheck
+<https://w3id.org/shp#resultOfCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#resultOfCheck> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#DashReport> .
+<https://w3id.org/shp#resultOfCheck> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#resultOfCheck> <http://www.w3.org/2000/01/rdf-schema#comment> "The results of a DataCheck-activity that generated DashReport-Enity. Currently it is recommended that is either has the values “passed” or “failed”." .
+<https://w3id.org/shp#resultOfCheck> <http://www.w3.org/2000/01/rdf-schema#label> "result of check" .
+# 
+# https://w3id.org/shp#rowCount
+<https://w3id.org/shp#rowCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#rowCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#EntityCharacteristic> .
+<https://w3id.org/shp#rowCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/shp#rowCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Count of extracted records in a dataset." .
+<https://w3id.org/shp#rowCount> <http://www.w3.org/2000/01/rdf-schema#label> "row count" .
+# 
+# https://w3id.org/shp#smallestDistinctNumber
+<https://w3id.org/shp#smallestDistinctNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#smallestDistinctNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#EntityCharacteristic> .
+<https://w3id.org/shp#smallestDistinctNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/shp#smallestDistinctNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The smallest value present in a variable." .
+<https://w3id.org/shp#smallestDistinctNumber> <http://www.w3.org/2000/01/rdf-schema#label> "smallest distinct number" .
+# 
+# https://w3id.org/shp#studyId
+<https://w3id.org/shp#studyId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#studyId> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#ProjectIdToStudyIdTable> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#studyId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/shp#studyId> <http://www.w3.org/2000/01/rdf-schema#comment> "In DaSH, each dataset of a project gets its own unique Study ID assigned. The Study ID is used as a prefix (usually 4 digits) for the pseudo-ID." .
+<https://w3id.org/shp#studyId> <http://www.w3.org/2000/01/rdf-schema#label> "study id" .
+# 
+# https://w3id.org/shp#uniqueChiCount
+<https://w3id.org/shp#uniqueChiCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#uniqueChiCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#EntityCharacteristic> .
+<https://w3id.org/shp#uniqueChiCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/shp#uniqueChiCount> <http://www.w3.org/2000/01/rdf-schema#comment> "A number of unique CHI numbers." .
+<https://w3id.org/shp#uniqueChiCount> <http://www.w3.org/2000/01/rdf-schema#label> "unique CHI count" .
+# 
+# https://w3id.org/shp#version
+<https://w3id.org/shp#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/shp#version> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#Database> .
+<https://w3id.org/shp#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#version> <http://www.w3.org/2000/01/rdf-schema#comment> "Database version" .
+<https://w3id.org/shp#version> <http://www.w3.org/2000/01/rdf-schema#label> "version" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/shp#Analyst
+<https://w3id.org/shp#Analyst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#Analyst> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Person> .
+<https://w3id.org/shp#Analyst> <http://www.w3.org/2000/01/rdf-schema#comment> "Analyst is responsible for the validation checks during extraction, pseudonymisation and/or linkage." .
+<https://w3id.org/shp#Analyst> <http://www.w3.org/2000/01/rdf-schema#label> "Analyst" .
+# 
+# https://w3id.org/shp#Cohort
+<https://w3id.org/shp#Cohort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#Cohort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreProjectDocument> .
+<https://w3id.org/shp#Cohort> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of all individual people/items in the cohort. A cohort is often the people being studied, but could also be items such as scans or prescriptions."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#Cohort> <http://www.w3.org/2000/01/rdf-schema#label> "Cohort" .
+# 
+# https://w3id.org/shp#CohortCreation
+<https://w3id.org/shp#CohortCreation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#CohortCreation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#CohortCreation> <http://www.w3.org/2000/01/rdf-schema#comment> "The cohort is either created by the Lead Analyst or based on the specification provided by the researcher or based on a cohort list provided by the researcher." .
+<https://w3id.org/shp#CohortCreation> <http://www.w3.org/2000/01/rdf-schema#label> "Cohort Creation" .
+# 
+# https://w3id.org/shp#DashReport
+<https://w3id.org/shp#DashReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DashReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/shp#DashReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Reports related to validation checks, disclosure checks and sum checks" .
+<https://w3id.org/shp#DashReport> <http://www.w3.org/2000/01/rdf-schema#label> "Dash Report" .
+# 
+# https://w3id.org/shp#DataCheck
+<https://w3id.org/shp#DataCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DataCheck> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#DataCheck> <http://www.w3.org/2000/01/rdf-schema#comment> "Group of activities that validates the data linkage process for the project and ensure all the necessary permission are in place for the researcher." .
+<https://w3id.org/shp#DataCheck> <http://www.w3.org/2000/01/rdf-schema#label> "Data Check" .
+# 
+# https://w3id.org/shp#DataExtraction
+<https://w3id.org/shp#DataExtraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DataExtraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#DataExtraction> <http://www.w3.org/2000/01/rdf-schema#comment> "The process of extracting data related to the Cohort from datasets according to the specific variables (fields) selected by researchers." .
+<https://w3id.org/shp#DataExtraction> <http://www.w3.org/2000/01/rdf-schema#label> "Data Extraction" .
+# 
+# https://w3id.org/shp#DataLinkagePlan
+<https://w3id.org/shp#DataLinkagePlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DataLinkagePlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+<https://w3id.org/shp#DataLinkagePlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreProjectDocument> .
+<https://w3id.org/shp#DataLinkagePlan> <http://www.w3.org/2000/01/rdf-schema#comment> "The Data Linkage Plan specifies the data flow from data ingress to data egress in the DaSH environment, specifies the Cohort and specifies the datasets required for the research project." .
+<https://w3id.org/shp#DataLinkagePlan> <http://www.w3.org/2000/01/rdf-schema#label> "Data Linkage Plan" .
+# 
+# https://w3id.org/shp#DataSet
+<https://w3id.org/shp#DataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/shp#DataSet> <http://www.w3.org/2000/01/rdf-schema#comment> "Is a cohort-based subset of the Database(s) specific to a research project."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#DataSet> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
+# 
+# https://w3id.org/shp#DataSourceSpecification
+<https://w3id.org/shp#DataSourceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DataSourceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/shp#DataSourceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Part of Data Specification File that describes the specific Database and corresponding Variables that shoudl be used during the Data Extraction Process." .
+<https://w3id.org/shp#DataSourceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Data Source Specification" .
+# 
+# https://w3id.org/shp#DataSpecificationFile
+<https://w3id.org/shp#DataSpecificationFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DataSpecificationFile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreProjectDocument> .
+<https://w3id.org/shp#DataSpecificationFile> <http://www.w3.org/2000/01/rdf-schema#comment> "In the Grampian Data Safe Haven, the data specification file details the specific databases and variables within the database that should be extracted for the project." .
+<https://w3id.org/shp#DataSpecificationFile> <http://www.w3.org/2000/01/rdf-schema#label> "Data Specification File" .
+# 
+# https://w3id.org/shp#DataTransfer
+<https://w3id.org/shp#DataTransfer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DataTransfer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#DataTransfer> <http://www.w3.org/2000/01/rdf-schema#comment> "Transfers between different servers in the DaSH environment." .
+<https://w3id.org/shp#DataTransfer> <http://www.w3.org/2000/01/rdf-schema#label> "Data Transfer" .
+# 
+# https://w3id.org/shp#Database
+<https://w3id.org/shp#Database> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#Database> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/shp#Database> <http://www.w3.org/2000/01/rdf-schema#comment> "A database or data source from which datasets are derived." .
+<https://w3id.org/shp#Database> <http://www.w3.org/2000/01/rdf-schema#label> "Database" .
+# 
+# https://w3id.org/shp#DatasetLinkage
+<https://w3id.org/shp#DatasetLinkage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DatasetLinkage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#DatasetLinkage> <http://www.w3.org/2000/01/rdf-schema#comment> "Replacing the dataset-specific pseudo-IDs with a common pseudo-ID across all of the project datasets that links together all datasets for a specific project." .
+<https://w3id.org/shp#DatasetLinkage> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Linkage" .
+# 
+# https://w3id.org/shp#DatasetLinkageIdMapping
+<https://w3id.org/shp#DatasetLinkageIdMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DatasetLinkageIdMapping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreProjectDocument> .
+<https://w3id.org/shp#DatasetLinkageIdMapping> <http://www.w3.org/2000/01/rdf-schema#comment> "Linkage file maps the original identifiable ID (e.g. such as CHI) in the respective dataset to a project and dataset specific new UID. In other words, those UIDs are different for each dataset in a project. This is to prevent premature linkage of the data before is has been fully anonymised."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#DatasetLinkageIdMapping> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Linkage ID Mapping" .
+# 
+# https://w3id.org/shp#DatasetRelease
+<https://w3id.org/shp#DatasetRelease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DatasetRelease> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#DatasetRelease> <http://www.w3.org/2000/01/rdf-schema#comment> "The project-specific data released to a researcher in the trusted research environment for researcher analysis. This consists of datasets (i.e., flat-files of the extracted, pseudonymised and linked data), Data Linkage Plan, Data Specification file, and summary data that are provided to a researcher in their project folder." .
+<https://w3id.org/shp#DatasetRelease> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Release" .
+# 
+# https://w3id.org/shp#DisclosureCheck
+<https://w3id.org/shp#DisclosureCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DisclosureCheck> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#DataCheck> .
+<https://w3id.org/shp#DisclosureCheck> <http://www.w3.org/2000/01/rdf-schema#comment> "Aggregate results compiled by the researcher during their analysis of the released data in the Trusted Research Environment, are reviewed by TRE staff to ensure there are no risks of identifying individuals in the released data."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#DisclosureCheck> <http://www.w3.org/2000/01/rdf-schema#label> "Disclosure Check" .
+# 
+# https://w3id.org/shp#DisclosureCheckReport
+<https://w3id.org/shp#DisclosureCheckReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#DisclosureCheckReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#DashReport> .
+<https://w3id.org/shp#DisclosureCheckReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Report of the results of the disclosure checks, which indicates if the work of the Lead analyst has passed or failed the disclosure check."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#DisclosureCheckReport> <http://www.w3.org/2000/01/rdf-schema#label> "Disclosure Check Report" .
+# 
+# https://w3id.org/shp#EntityCharacteristic
+<https://w3id.org/shp#EntityCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#EntityCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "A utility concept for referencing specific properties of an Entity. For example, if an entitiy represents a dataset, an EntityChracteristic can capture a collection of summary statistics such as min max values, etc." .
+<https://w3id.org/shp#EntityCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Entitiy Characteristic" .
+# 
+# https://w3id.org/shp#FlatFileCreation
+<https://w3id.org/shp#FlatFileCreation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#FlatFileCreation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#FlatFileCreation> <http://www.w3.org/2000/01/rdf-schema#comment> "Datasets and Linkage dataset exported from SQL to flat-files" .
+<https://w3id.org/shp#FlatFileCreation> <http://www.w3.org/2000/01/rdf-schema#label> "FlatFileCreation" .
+# 
+# https://w3id.org/shp#IdLinkage
+<https://w3id.org/shp#IdLinkage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#IdLinkage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#IdLinkage> <http://www.w3.org/2000/01/rdf-schema#comment> "Creating a unique identifier (UID) mapping table for each pseudonymised dataset, which maps the original identifier (non-pseudonymised) of the dataset to the new pseudonymised ID for that dataset." .
+<https://w3id.org/shp#IdLinkage> <http://www.w3.org/2000/01/rdf-schema#label> "ID Linkage" .
+# 
+# https://w3id.org/shp#LeadAnalyst
+<https://w3id.org/shp#LeadAnalyst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#LeadAnalyst> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Person> .
+<https://w3id.org/shp#LeadAnalyst> <http://www.w3.org/2000/01/rdf-schema#comment> "Lead Analyst is responsible for the whole cohort creation, data extraction, pseudonymisation and data linkage process of the project. Depending on the data safe haven, the analysts may or may not have the right to see and work on the non-anonymized data." .
+<https://w3id.org/shp#LeadAnalyst> <http://www.w3.org/2000/01/rdf-schema#label> "Lead Analyst" .
+# 
+# https://w3id.org/shp#OriginalIdRemoval
+<https://w3id.org/shp#OriginalIdRemoval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#OriginalIdRemoval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#OriginalIdRemoval> <http://www.w3.org/2000/01/rdf-schema#comment> "Once all datasets for the project have had pseudo-IDs applied and a linkage dataset created, the original IDs are removed from the UID mapping table (a dataset moves from Pre-Release to Release)" .
+<https://w3id.org/shp#OriginalIdRemoval> <http://www.w3.org/2000/01/rdf-schema#label> "Original ID Removal" .
+# 
+# https://w3id.org/shp#ProjectIdAssignment
+<https://w3id.org/shp#ProjectIdAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#ProjectIdAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#ProjectIdAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Project IDs are assigned to a project by the Research Coordinator." .
+<https://w3id.org/shp#ProjectIdAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Project ID Assignment" .
+# 
+# https://w3id.org/shp#ProjectIdToStudyIdTable
+<https://w3id.org/shp#ProjectIdToStudyIdTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#ProjectIdToStudyIdTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/shp#ProjectIdToStudyIdTable> <http://www.w3.org/2000/01/rdf-schema#comment> "This table tracks which Project ID has which Study IDs assigned. Each Project has one Project ID, but can have multiple Study IDs. As each dataset of the project get its own unique Study ID assigned. Project IDs are assigned to a project by the Research Coordinator as soon as a researcher makes contact with the Data Safen Haven and wants to discuss his project idea." .
+<https://w3id.org/shp#ProjectIdToStudyIdTable> <http://www.w3.org/2000/01/rdf-schema#label> "Project ID to Study ID Table" .
+# 
+# https://w3id.org/shp#Pseudonymization
+<https://w3id.org/shp#Pseudonymization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#Pseudonymization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#Pseudonymization> <http://www.w3.org/2000/01/rdf-schema#comment> "Techniques that replace, remove or transform information that identifies an individual (e.g. replacing date of birth with age, replacing postcode with a regional classification or demographic marker, replacing NHS number/CHI number with a pseudo-ID number)." .
+<https://w3id.org/shp#Pseudonymization> <http://www.w3.org/2000/01/rdf-schema#label> "Pseudonymization" .
+# 
+# https://w3id.org/shp#RequestedVariables
+<https://w3id.org/shp#RequestedVariables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#RequestedVariables> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Collection> .
+<https://w3id.org/shp#RequestedVariables> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of variables requested by the researcher and included in the Data Specification File." .
+<https://w3id.org/shp#RequestedVariables> <http://www.w3.org/2000/01/rdf-schema#label> "Requested Variables" .
+# 
+# https://w3id.org/shp#ResearchCoordinator
+<https://w3id.org/shp#ResearchCoordinator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#ResearchCoordinator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Person> .
+<https://w3id.org/shp#ResearchCoordinator> <http://www.w3.org/2000/01/rdf-schema#comment> "In the Grampian Data Safe Haven, Research Coordinators facilitate the use of routinely collected health and population data for research. Research Coordinators also ensure all information governance and information security measures related to research projects, including reviewing project permissions, approved researcher access periods, appropriate training has been undertaken before and during access to the TRE. Research Coordinators support researchers from academic, NHS and industry to design, plan, gather permissions and conduct research involving health and administrative data." .
+<https://w3id.org/shp#ResearchCoordinator> <http://www.w3.org/2000/01/rdf-schema#label> "Research Coordinator" .
+# 
+# https://w3id.org/shp#Researcher
+<https://w3id.org/shp#Researcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#Researcher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Person> .
+<https://w3id.org/shp#Researcher> <http://www.w3.org/2000/01/rdf-schema#comment> "A person who carries out academic, scientific or clinical research. Researchers who require a TRE (or SDE/Safe Haven), must have any research project approved by ethical permissions to undertake the research and require enhanced information governance and security training to become approved to access highly-sensitive data within the TRE." .
+<https://w3id.org/shp#Researcher> <http://www.w3.org/2000/01/rdf-schema#label> "Researcher" .
+# 
+# https://w3id.org/shp#SelectedVariables
+<https://w3id.org/shp#SelectedVariables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#SelectedVariables> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Collection> .
+<https://w3id.org/shp#SelectedVariables> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of Variables that were selected during the extraction process and are contained within a particular dataset." .
+<https://w3id.org/shp#SelectedVariables> <http://www.w3.org/2000/01/rdf-schema#label> "Selected Variables" .
+# 
+# https://w3id.org/shp#SensitiveVariable
+<https://w3id.org/shp#SensitiveVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#SensitiveVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#Variable> .
+<https://w3id.org/shp#SensitiveVariable> <http://www.w3.org/2000/01/rdf-schema#label> "Sensitive Variable" .
+# 
+# https://w3id.org/shp#SignOff
+<https://w3id.org/shp#SignOff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#SignOff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#DataCheck> .
+<https://w3id.org/shp#SignOff> <http://www.w3.org/2000/01/rdf-schema#comment> "Senior member of staff reviewed the validated datasets for data integrity and data pseudonymisation. Data signoff has more of an emphasis on validity of extraction, data validation process and aligns with research project ethical permissions. This is a key step prior to data transferring between different servers/environments (e.g. NHS data moving onto University servers, or data on University servers being released to a project folder for a researcher to access." .
+<https://w3id.org/shp#SignOff> <http://www.w3.org/2000/01/rdf-schema#label> "Sign Off" .
+# 
+# https://w3id.org/shp#StatisticalSummary
+<https://w3id.org/shp#StatisticalSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#StatisticalSummary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreProjectDocument> .
+<https://w3id.org/shp#StatisticalSummary> <http://www.w3.org/2000/01/rdf-schema#comment> "Give a summary statistic (e.g. mean, max, min etc) of a dataset regardless the data type (e.g. integer, string, character, Boolean etc.)"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#StatisticalSummary> <http://www.w3.org/2000/01/rdf-schema#label> "Statistical Summary"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://w3id.org/shp#StudyIdAssignment
+<https://w3id.org/shp#StudyIdAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#StudyIdAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#StudyIdAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Update the ProjectID To StudyID Table with a new the ProjectID to StudyID pairs for use in linkage/anonymisation" .
+<https://w3id.org/shp#StudyIdAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Study ID Assignment" .
+# 
+# https://w3id.org/shp#TechnicalLead
+<https://w3id.org/shp#TechnicalLead> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#TechnicalLead> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Person> .
+<https://w3id.org/shp#TechnicalLead> <http://www.w3.org/2000/01/rdf-schema#comment> "Has overall responsibilities and does the disclosure checks. They should have the right to access the non-anonymized data." .
+<https://w3id.org/shp#TechnicalLead> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Lead" .
+# 
+# https://w3id.org/shp#TreActivity
+<https://w3id.org/shp#TreActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#TreActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/shp#TreActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Activities that happen in the data production within a trusted research environment. For the Grampian Data Safe Haven, this covers all activities in data production, such as Cohort Creation, Data Extraction, Pseudonymisation, Validation Check, etc." .
+<https://w3id.org/shp#TreActivity> <http://www.w3.org/2000/01/rdf-schema#label> "TRE Activity" .
+# 
+# https://w3id.org/shp#TreProject
+<https://w3id.org/shp#TreProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#TreProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Bundle> .
+<https://w3id.org/shp#TreProject> <http://www.w3.org/2000/01/rdf-schema#comment> "A research project in a trusted research environment (TRE); also known as a secure data environment (SDE) or a Safe Haven.\nIn the Grampian Data Safe Haven (DaSH), projects receive specific ethical approvals for the use of unconsented health and population data for public benefit." .
+<https://w3id.org/shp#TreProject> <http://www.w3.org/2000/01/rdf-schema#label> "TRE Project" .
+# 
+# https://w3id.org/shp#TreProjectDocument
+<https://w3id.org/shp#TreProjectDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#TreProjectDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/shp#TreProjectDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "Documents that bare some form of importance and information required for the delivery of the TRE project.\nIn the Grampian Data Safe Haven (DaSH), these are the project protocol,  Data Linkage Plan (i.e., a visualisation of the data sources and data flow from the ingress of data to egress of data in the DaSH environment), and Data Specification File (i.e., variables required for the DaSH Project across datasets selected by researchers and used by data analysts to extract data for each project)." .
+<https://w3id.org/shp#TreProjectDocument> <http://www.w3.org/2000/01/rdf-schema#label> "TRE Project Document" .
+# 
+# https://w3id.org/shp#UidMapping
+<https://w3id.org/shp#UidMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#UidMapping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreProjectDocument> .
+<https://w3id.org/shp#UidMapping> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique Identifier mapping file, maps the corresponding UID in the different dataset in a project to each other. This allows the correct linkage later, once the dataset have been fully anonymised"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#UidMapping> <http://www.w3.org/2000/01/rdf-schema#label> "UID Mapping" .
+# 
+# https://w3id.org/shp#Update
+<https://w3id.org/shp#Update> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#Update> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
+<https://w3id.org/shp#Update> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that generates new version of an asset (e.g., document, dataset, etc.)." .
+<https://w3id.org/shp#Update> <http://www.w3.org/2000/01/rdf-schema#label> "Update" .
+# 
+# https://w3id.org/shp#ValidationCheck
+<https://w3id.org/shp#ValidationCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#ValidationCheck> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#DataCheck> .
+<https://w3id.org/shp#ValidationCheck> <http://www.w3.org/2000/01/rdf-schema#comment> "heck of project activities and entities against project requirements and permissions. This involves one or more data Analysts who are involved in data validation checks after the Lead Analyst has built a cohort, extracted and pseudonymised data and/or linked the datasets for a research project. Validation checks concentrate on technical aspects,whether the coding is correct and that datasets match the Data Linkage Plan and Data Specification File. It generates a validation check report."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#ValidationCheck> <http://www.w3.org/2000/01/rdf-schema#label> "Validation Check" .
+# 
+# https://w3id.org/shp#ValidationCheckReport
+<https://w3id.org/shp#ValidationCheckReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#ValidationCheckReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#DashReport> .
+<https://w3id.org/shp#ValidationCheckReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Report of the results of the validation checks, which indicates if the work of the Lead analyst has passed or failed the validation check."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/shp#ValidationCheckReport> <http://www.w3.org/2000/01/rdf-schema#label> "Validation Check Report" .
+# 
+# https://w3id.org/shp#Variable
+<https://w3id.org/shp#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#Variable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/shp#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "A data item that captures a characteristic, number, or quantity that can be measured or counted. The data associated with the variable may be different (for example dates, ages, etc.)." .
+<https://w3id.org/shp#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable" .
+# 
+# https://w3id.org/shp#VariableConstraint
+<https://w3id.org/shp#VariableConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#VariableConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A constraint (e.g., a date range) that can associated with a specific variable requested by the researcher." .
+<https://w3id.org/shp#VariableConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Variable Constraint" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,672 @@
+@prefix : <https://w3id.org/shp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/shp> .
+
+<https://w3id.org/shp> rdf:type owl:Ontology ;
+                        owl:imports <http://www.w3.org/ns/prov-o-20130430> ;
+                        <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+                        <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/iahs/people/profiles/jessicabutler> ,
+                                                           <https://www.abdn.ac.uk/ncs/profiles/milan.markovic/> ,
+                                                           <https://www.abdn.ac.uk/people/bernhard.scheliga/> ,
+                                                           <https://www.abdn.ac.uk/people/helen.rowlands/> ;
+                        <http://purl.org/dc/terms/description> "An ontology to describe provenance of data anonymization workflows (i.e., data linkage) in high security research environments such as the Scottish Safe Haven."@en ;
+                        <http://purl.org/dc/terms/issued> "2022-03-29"^^xsd:date ;
+                        <http://purl.org/dc/terms/modified> "2022-03-29"^^xsd:date ;
+                        <http://purl.org/dc/terms/rights> "Copyright 2022 University of Aberdeen" ;
+                        <http://purl.org/dc/terms/title> "The Safe Haven Provenance (SHP) Ontology"@en ;
+                        <http://purl.org/vocab/vann/preferredNamespacePrefix> "shp" ;
+                        <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/shp#" ;
+                        rdfs:label "The SHP Ontology"@en ;
+                        owl:versionInfo "0.1"^^xsd:double .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/shp#dataSource
+:dataSource rdf:type owl:ObjectProperty ;
+            rdfs:domain :DataLinkagePlan ;
+            rdfs:range :LinkagePlanDataSource ;
+            rdfs:comment "A property for linking data sources to corresponding data plans." ;
+            rdfs:label "data source" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/shp#abbreviation
+:abbreviation rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Database ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "Short name of source database" ;
+              rdfs:label "abbreviation" .
+
+
+###  https://w3id.org/shp#cohortMembersLinked
+:cohortMembersLinked rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :DataSet ;
+                     rdfs:range xsd:nonNegativeInteger ;
+                     rdfs:comment "Number of cohort members successfully linked" ;
+                     rdfs:label "cohort members linked" .
+
+
+###  https://w3id.org/shp#cohortMembersNotLinked
+:cohortMembersNotLinked rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :DataSet ;
+                        rdfs:range xsd:nonNegativeInteger ;
+                        rdfs:comment "Number of cohort members not linked" ;
+                        rdfs:label "cohort members not linked" .
+
+
+###  https://w3id.org/shp#cohortMembersWithInvalidLinkageVariable
+:cohortMembersWithInvalidLinkageVariable rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain :DataSet ;
+                                         rdfs:range xsd:nonNegativeInteger ;
+                                         rdfs:comment "Number of eligible cohort members with an incorrect or missing identifier as linkage variable" ;
+                                         rdfs:label "cohort members with invalid linkage variable" .
+
+
+###  https://w3id.org/shp#cohortPermanentId
+:cohortPermanentId rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :DataLinkagePlan ;
+                   rdfs:range rdfs:Literal ;
+                   rdfs:comment "Unique identifier for cohort file used in extraction" ;
+                   rdfs:label "cohort permamnet id" .
+
+
+###  https://w3id.org/shp#cohortSize
+:cohortSize rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :DataSet
+                                        :UidMapping
+                                      )
+                        ] ;
+            rdfs:range xsd:nonNegativeInteger ;
+            rdfs:comment "Total number of people in the cohort. This number was either determined by the analyst before the before the data linkage process or was provided by the researcher." ;
+            rdfs:label "cohort size" .
+
+
+###  https://w3id.org/shp#cohortSpecification
+:cohortSpecification rdf:type owl:DatatypeProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :DataLinkagePlan
+                                                 :DataSet
+                                               )
+                                 ] ;
+                     rdfs:range rdfs:Literal ;
+                     rdfs:comment """Data linkage Plan: The cohort specification based on the researchers criteria to answer their research question.
+
+Dataset: How the Lead Analyst defined the cohort""" ;
+                     rdfs:label "cohort specification" .
+
+
+###  https://w3id.org/shp#contact
+:contact rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Database ;
+         rdfs:range rdfs:Literal ;
+         rdfs:comment "Point of contact for questions about source database" ;
+         rdfs:label "contact" .
+
+
+###  https://w3id.org/shp#contexualInformationLink
+:contexualInformationLink rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Database ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Web URL or folder path that point to the contextual information of the source data such as e.g. Metadata, variable definition, collection methods etc." ;
+                          rdfs:label "contextual information link" .
+
+
+###  https://w3id.org/shp#dataCustodian
+:dataCustodian rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Database ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "Data custodian of source database" ;
+               rdfs:label "data custodian" .
+
+
+###  https://w3id.org/shp#databaseName
+:databaseName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Database ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "Name of source database" ;
+              rdfs:label "database name" .
+
+
+###  https://w3id.org/shp#extractedDataset
+:extractedDataset rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :DatasetRelease ;
+                  rdfs:range rdfs:Literal ;
+                  rdfs:comment "List of all datasets extracted and released into the project folder of the researcher" ;
+                  rdfs:label "extracted datasets" .
+
+
+###  https://w3id.org/shp#extractedVariables
+:extractedVariables rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :DataSet ;
+                    rdfs:range rdfs:Literal ;
+                    rdfs:comment "List of variables extracted from the database to form the dataset" ;
+                    rdfs:label "extracted variables" .
+
+
+###  https://w3id.org/shp#fileDate
+:fileDate rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+          rdfs:range xsd:dateTime ;
+          rdfs:comment "File date used in DASH project folder" ;
+          rdfs:label "file date" .
+
+
+###  https://w3id.org/shp#fileName
+:fileName rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+          rdfs:range rdfs:Literal ;
+          rdfs:comment "Assigned file name representing the particular entity and which will be included into the project folder released to the researcher" ;
+          rdfs:label "file name" .
+
+
+###  https://w3id.org/shp#lastKnownUpdate
+:lastKnownUpdate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Database ;
+                 rdfs:range xsd:dateTime ;
+                 rdfs:comment "When was the last known update of the database, before it was used to generate the dataset for the research project" ;
+                 rdfs:label "last known update" .
+
+
+###  https://w3id.org/shp#linkageVariable
+:linkageVariable rdf:type owl:DatatypeProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :DataLinkagePlan
+                                             :DataSet
+                                           )
+                             ] ;
+                 rdfs:range rdfs:Literal ;
+                 rdfs:comment "Variable used for linkage to source dataset" ;
+                 rdfs:label "linkage variable" .
+
+
+###  https://w3id.org/shp#mostRecentRecordDate
+:mostRecentRecordDate rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Database ;
+                      rdfs:range xsd:dateTime ;
+                      rdfs:comment "Date of the most recent record in database." ;
+                      rdfs:label "most recent record date" .
+
+
+###  https://w3id.org/shp#numberOfRecords
+:numberOfRecords rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :DataSet ;
+                 rdfs:range xsd:nonNegativeInteger ;
+                 rdfs:comment "A number of records in the dataset" ;
+                 rdfs:label "number of records" .
+
+
+###  https://w3id.org/shp#oldestRecordDate
+:oldestRecordDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Database ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:comment "The date and time of the oldest record in the database" ;
+                  rdfs:label "oldest record date" .
+
+
+###  https://w3id.org/shp#permanentId
+:permanentId rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :DataSet
+                                         :Database
+                                       )
+                         ] ;
+             rdfs:range rdfs:Literal ;
+             rdfs:comment "Unique identifier for source database" ;
+             rdfs:label "permanent id" .
+
+
+###  https://w3id.org/shp#projectId
+:projectId rdf:type owl:DatatypeProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :DashProject
+                                       :DataLinkagePlan
+                                       :ProjectIdToStudyIdTable
+                                     )
+                       ] ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment "Project IDs are assigned to a project by the Research Coordinator as soon as a researcher makes contact with the Data Safen Haven and wants to discuss his project idea." ;
+           rdfs:label "project id" .
+
+
+###  https://w3id.org/shp#requestedVariables
+:requestedVariables rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :LinkagePlanDataSource ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "A data property describing the variables that should be extracted from a specific data source defined in the linkage plan" ;
+                    rdfs:label "requested variables" .
+
+
+###  https://w3id.org/shp#resultOfCheck
+:resultOfCheck rdf:type owl:DatatypeProperty ;
+               rdfs:domain :DashReport ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "The results of a DataCheck-activity that generated DashReport-Enity. Currently it is recommended that is either has the values “passed” or “failed”." ;
+               rdfs:label "result of check" .
+
+
+###  https://w3id.org/shp#studyId
+:studyId rdf:type owl:DatatypeProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :DataSet
+                                     :ProjectIdToStudyIdTable
+                                   )
+                     ] ;
+         rdfs:range xsd:nonNegativeInteger ;
+         rdfs:comment "Each dataset of a project get its own unique Study ID assigned. The Study ID will used as a prefix (usually 4 digits) for anonymised ID number." ;
+         rdfs:label "study id" .
+
+
+###  https://w3id.org/shp#version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Database ;
+         rdfs:range rdfs:Literal ;
+         rdfs:comment "Database version" ;
+         rdfs:label "version" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/shp#Analyst
+:Analyst rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/ns/prov#Person> ;
+         rdfs:comment "Analyst is responsible for the validation checks" ;
+         rdfs:label "Analyst" .
+
+
+###  https://w3id.org/shp#Anonymization
+:Anonymization rdf:type owl:Class ;
+               rdfs:subClassOf :DashActivity ;
+               rdfs:comment "activitiies that anonymize data or identifiers" ;
+               rdfs:label "Anonymization" .
+
+
+###  https://w3id.org/shp#AssignCommonUidMapping
+:AssignCommonUidMapping rdf:type owl:Class ;
+                        rdfs:subClassOf :DashActivity ;
+                        rdfs:comment "Replacing the dataset specific anonymised UIDs with a common UID across all of the projects datasets, in other words linking anonymised UIDs" ;
+                        rdfs:label "Assign Common Uid Mapping" .
+
+
+###  https://w3id.org/shp#CheckValue
+:CheckValue rdf:type owl:Class ;
+            rdfs:subClassOf :UIDMapping2CheckReport ;
+            rdfs:comment "A check value that allows to determine whether a file has been changed or not. When it shouldn’t"^^rdfs:Literal ,
+                         "NOTE: the activity (UidMapping2Check) that generates this report is not yet official implemented into the workflow of the Analysts."^^rdfs:Literal ;
+            rdfs:label "Check Value" .
+
+
+###  https://w3id.org/shp#CohortCreation
+:CohortCreation rdf:type owl:Class ;
+                rdfs:subClassOf :DashActivity ;
+                rdfs:comment "The cohort is either created by the Analyst based on the specification provided by the researcher or based on a cohort list provided by the researcher" ;
+                rdfs:label "Cohort Creation" .
+
+
+###  https://w3id.org/shp#CohortList
+:CohortList rdf:type owl:Class ;
+            rdfs:subClassOf :DashProjectDocument ;
+            rdfs:comment "A list of all people in the cohort for the project from which the cohort size is derived"^^rdfs:Literal ;
+            rdfs:label "Cohort List" .
+
+
+###  https://w3id.org/shp#CreateCommonUid
+:CreateCommonUid rdf:type owl:Class ;
+                 rdfs:subClassOf :DashActivity ;
+                 rdfs:comment "Replacing the dataset specific anonymised UIDs with a common UID across all of the project's datasets, in other words linking anonymised UIDs" ;
+                 rdfs:label "Create Common UID" .
+
+
+###  https://w3id.org/shp#DashActivity
+:DashActivity rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+              rdfs:comment "Activities that are happening during the data linkage processActivities that are happening during the data linkage process" ;
+              rdfs:label "Dash Activity" .
+
+
+###  https://w3id.org/shp#DashProject
+:DashProject rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/prov#Bundle> ;
+             rdfs:comment "A research project in a  high security enviroment so called Data Safe Haven (Dash)" ;
+             rdfs:label "Dash Project" .
+
+
+###  https://w3id.org/shp#DashProjectDocument
+:DashProjectDocument rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                     rdfs:comment "Documents that bare some form of  importance and information required for the data linkage process of the project" ;
+                     rdfs:label "Dash Project Document" .
+
+
+###  https://w3id.org/shp#DashReport
+:DashReport rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+            rdfs:comment "Reports related to validation checks, disclosure checks and sum checks" ;
+            rdfs:label "Dash Report" .
+
+
+###  https://w3id.org/shp#DataAnonymization
+:DataAnonymization rdf:type owl:Class ;
+                   rdfs:subClassOf :Anonymization ;
+                   rdfs:comment "De-identifying data, for example aggregating postcodes to datazones, modifying date of birth to month of birth or providing age in years at specific dates" ;
+                   rdfs:label "Data Anonymization" .
+
+
+###  https://w3id.org/shp#DataCheck
+:DataCheck rdf:type owl:Class ;
+           rdfs:subClassOf :DashActivity ;
+           rdfs:comment "Group of activities that validates the data linkage process for the project and ensure all the necessary permission are in place for the researcher." ;
+           rdfs:label "Data Check" .
+
+
+###  https://w3id.org/shp#DataLinkagePlan
+:DataLinkagePlan rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/ns/prov#Plan> ,
+                                 :DashProjectDocument ;
+                 rdfs:comment "The Data Linkage Plan details the databases and variables that are going to be linked for a project" ;
+                 rdfs:label "Data Linkage Plan" .
+
+
+###  https://w3id.org/shp#DataSelection
+:DataSelection rdf:type owl:Class ;
+               rdfs:subClassOf :DashActivity ;
+               rdfs:comment "Extracting the dataset from the database based on cohort definition provided by the researcher and specified in the Data Linkage Plan" ;
+               rdfs:label "Data Selection" .
+
+
+###  https://w3id.org/shp#DataSet
+:DataSet rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+         rdfs:comment "Is a cohort-based subset of the Database"^^rdfs:Literal ;
+         rdfs:label "Dataset" .
+
+
+###  https://w3id.org/shp#DataTransfer
+:DataTransfer rdf:type owl:Class ;
+              rdfs:subClassOf :DashActivity ;
+              rdfs:comment "Datasets and Linkage Dataset flat-files securely transferred to the Data Safe Haven" ;
+              rdfs:label "Data Transfer" .
+
+
+###  https://w3id.org/shp#Database
+:Database rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+          rdfs:comment "a database or data source from which datasets are derived" ;
+          rdfs:label "Database" .
+
+
+###  https://w3id.org/shp#DatasetLinkageIdMapping
+:DatasetLinkageIdMapping rdf:type owl:Class ;
+                         rdfs:subClassOf :DashProjectDocument ;
+                         rdfs:comment "Linkage file maps the original identifiable ID (e.g. such as CHI) in the respective dataset to a project and dataset specific new UID. In other words, those UIDs are different for each dataset in a project. This is to prevent premature linkage of the data before is has been fully anonymised."^^rdfs:Literal ;
+                         rdfs:label "Dataset Linkage ID Mapping" .
+
+
+###  https://w3id.org/shp#DatasetRelease
+:DatasetRelease rdf:type owl:Class ;
+                rdfs:subClassOf :DashActivity ;
+                rdfs:comment "Flat-files (Datasets), Data Linkage Plan and statistical summary are transferred to project folder, which is accessible to researcher." ;
+                rdfs:label "Dataset Release" .
+
+
+###  https://w3id.org/shp#DatasetSummarisation
+:DatasetSummarisation rdf:type owl:Class ;
+                      rdfs:subClassOf :DashActivity ;
+                      rdfs:comment "A statistical summary of the dataset is created. The following values are generated regardless of variable type: datatype, Completeness, Total entries, % non null, minimum, maximum, smallest disclosed number" ;
+                      rdfs:label "Dataset Summarisation" .
+
+
+###  https://w3id.org/shp#DisclosureCheck
+:DisclosureCheck rdf:type owl:Class ;
+                 rdfs:subClassOf :DataCheck ;
+                 rdfs:comment "Technical Lead checks the prepared datasets for disclosive elements. Disclosure checks have more of an emphasis on validity of permissions. Known as ‘sign off’. This is a key step prior to data moving from e.g. NHS side to the data safe haven. It generates a disclosure check report."^^rdfs:Literal ;
+                 rdfs:label "Disclosure Check" .
+
+
+###  https://w3id.org/shp#DisclosureCheckReport
+:DisclosureCheckReport rdf:type owl:Class ;
+                       rdfs:subClassOf :DashReport ;
+                       rdfs:comment "Report of the results of the disclosure checks, which indicates if the work of the Lead analyst has passed or failed the disclosure check."^^rdfs:Literal ;
+                       rdfs:label "Disclosure Check Report" .
+
+
+###  https://w3id.org/shp#FailedDisclosureCheck
+:FailedDisclosureCheck rdf:type owl:Class ;
+                       rdfs:comment "Outcome of the Dislcousre Check when it FAILED" ;
+                       rdfs:label "Failed Disclosure Check" .
+
+
+###  https://w3id.org/shp#FailedValidationCheck
+:FailedValidationCheck rdf:type owl:Class ;
+                       rdfs:comment "Outcome of the Validation Check when it FAILED" ;
+                       rdfs:label "Failed Validation Check" .
+
+
+###  https://w3id.org/shp#GenerateCheckValue
+:GenerateCheckValue rdf:type owl:Class ;
+                    rdfs:subClassOf :DataCheck ;
+                    rdfs:comment "It generates a check value (e.g. “sum check”) for a file to help determine if the file had been changed or not."^^rdfs:Literal ,
+                                 "NOTE: This activity is not yet official implemented into the workflow of the Analysts."^^rdfs:Literal ;
+                    rdfs:label "Generate Check Value" .
+
+
+###  https://w3id.org/shp#IdAnonymization
+:IdAnonymization rdf:type owl:Class ;
+                 rdfs:subClassOf :Anonymization ;
+                 rdfs:comment "Replacing the original identifiers in the dataset with a new anonymized unique identifier specific for that dataset." ;
+                 rdfs:label "ID Anonymization" .
+
+
+###  https://w3id.org/shp#IdLinkage
+:IdLinkage rdf:type owl:Class ;
+           rdfs:subClassOf :DashActivity ;
+           rdfs:comment "Create a unique identifier (UID) mapping table for each anonymized dataset, which maps the original identifier (non-anonymized) of the dataset to the new assign anonymized UIDs for that dataset." ;
+           rdfs:label "ID Linkage" .
+
+
+###  https://w3id.org/shp#LeadAnalyst
+:LeadAnalyst rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/prov#Person> ;
+             rdfs:comment "Lead Analyst is responsible for the whole data linkage process of the project. Depending on the data safe haven, the analysts may or may not have the right to see and work on the non-anonymized data." ;
+             rdfs:label "Lead Analyst" .
+
+
+###  https://w3id.org/shp#LinkagePlanDataSource
+:LinkagePlanDataSource rdf:type owl:Class ;
+                       rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                       rdfs:comment "Holds the names of the source databases that are listed in the Data Linkage Plan for the project. This is to check wether all databases had been used in the data linkage process or not." ;
+                       rdfs:label "Linkage Plan Data Source" .
+
+
+###  https://w3id.org/shp#NhsDatabase
+:NhsDatabase rdf:type owl:Class ;
+             rdfs:subClassOf :Database ;
+             rdfs:comment "A database from the Nathional Heath Service of the United Kingdom, that hold electronic health records. These are routinely collected data generated when an individual receivescare in a health care setting."^^rdfs:Literal ;
+             rdfs:label "NHS database"^^rdfs:Literal .
+
+
+###  https://w3id.org/shp#NhsDataset
+:NhsDataset rdf:type owl:Class ;
+            rdfs:subClassOf :DataSet ;
+            rdfs:comment "A dataset derived from an NHS database" ;
+            rdfs:label "NHS Dataset" .
+
+
+###  https://w3id.org/shp#OriginalIdRemoval
+:OriginalIdRemoval rdf:type owl:Class ;
+                   rdfs:subClassOf :DashActivity ;
+                   rdfs:comment "Once all datasets for the project have had anonymised IDs applied and a linkage dataset created, the original IDs are removed from the UID mapping table (a dataset moves from Pre-Release to Release)" ;
+                   rdfs:label "Original ID Removal" .
+
+
+###  https://w3id.org/shp#PassedDisclosureCheck
+:PassedDisclosureCheck rdf:type owl:Class ;
+                       rdfs:comment "Outcome of the Dislcousre Check when it PASSED" ;
+                       rdfs:label "Passed Disclosure Check" .
+
+
+###  https://w3id.org/shp#PassedValidationCheck
+:PassedValidationCheck rdf:type owl:Class ;
+                       rdfs:comment "Outcome of the Validation Check when it PASSED" ;
+                       rdfs:label "Passed Validation Check" .
+
+
+###  https://w3id.org/shp#ProjectIdAssignment
+:ProjectIdAssignment rdf:type owl:Class ;
+                     rdfs:subClassOf :DashActivity ;
+                     rdfs:comment "Project IDs are assigned to a project by the Research Coordinator as soon as a researcher makes contact with the Data Safen Haven and wants to discuss his project idea" ;
+                     rdfs:label "Project ID Assignment" .
+
+
+###  https://w3id.org/shp#ProjectIdToStudyIdTable
+:ProjectIdToStudyIdTable rdf:type owl:Class ;
+                         rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                         rdfs:comment "This table tracks which Project ID has which Study IDs assigned. Each Project has one Project ID, but can have multiple Study IDs. As each dataset of the project get its own unique Study ID assigned. Project IDs are assigned to a project by the Research Coordinator as soon as a researcher makes contact with the Data Safen Haven and wants to discuss his project idea." ;
+                         rdfs:label "Project ID to Study ID Table" .
+
+
+###  https://w3id.org/shp#ResearchCoordinator
+:ResearchCoordinator rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.w3.org/ns/prov#Person> ;
+                     rdfs:comment "Research Coordinators facilitate the use of routinely collected data for health research. Research Coordinators support researchers from academia, NHS and industry to design, plan, gather permissions and conduct research involving health and administrative data." ;
+                     rdfs:label "Research Coordinator" .
+
+
+###  https://w3id.org/shp#Researcher
+:Researcher rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/prov#Person> ;
+            rdfs:comment "A person whose research may require a high-secure environment (Data Safe Haven)." ;
+            rdfs:label "Researcher" .
+
+
+###  https://w3id.org/shp#SignOff
+:SignOff rdf:type owl:Class ;
+         rdfs:subClassOf :DashActivity ;
+         rdfs:comment "to give approval" ;
+         rdfs:label "Sign Off" .
+
+
+###  https://w3id.org/shp#StatisticalSummary
+:StatisticalSummary rdf:type owl:Class ;
+                    rdfs:subClassOf :DashProjectDocument ;
+                    rdfs:comment "Give a summary statistic (e.g. mean, max, min etc) of a dataset regardless the data type (e.g. integer, string, character, Boolean etc.)"^^rdfs:Literal ;
+                    rdfs:label "Statistical Summary"^^rdfs:Literal .
+
+
+###  https://w3id.org/shp#Storage
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf :DashActivity ;
+         rdfs:comment "Datasets and Linkage dataset exported from SQL to flat-files" ;
+         rdfs:label "Storage" .
+
+
+###  https://w3id.org/shp#StudyIdAssignment
+:StudyIdAssignment rdf:type owl:Class ;
+                   rdfs:subClassOf :DashActivity ;
+                   rdfs:comment "Update the ProjectID To StudyID Table with a new the ProjectID to StudyID pairs for use in linkage/anonymisation" ;
+                   rdfs:label "Study ID Assignment" .
+
+
+###  https://w3id.org/shp#TechnicalLead
+:TechnicalLead rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/ns/prov#Person> ;
+               rdfs:comment "Has overall responsibilities and does the disclosure checks. They should have the right to access the non-anonymized data." ;
+               rdfs:label "Technical Lead" .
+
+
+###  https://w3id.org/shp#UIDMapping2CheckReport
+:UIDMapping2CheckReport rdf:type owl:Class ;
+                        rdfs:subClassOf :DashReport ;
+                        rdfs:comment "NOTE: the activity (UidMapping2Check) that generates this report is not yet official implemented into the workflow of the Analysts."^^rdfs:Literal ,
+                                     "Report of the results of the UidMapping2Check, which indicates if the UidMapping2-file or table has changed after the original IDs were removed. It should never change after the original IDs were removed and before the new common UIDs are assigned."^^rdfs:Literal ;
+                        rdfs:label "UID-Mapping-2 Check Report" .
+
+
+###  https://w3id.org/shp#UidMapping
+:UidMapping rdf:type owl:Class ;
+            rdfs:subClassOf :DashProjectDocument ;
+            rdfs:comment "Unique Identifier mapping file, maps the corresponding UID in the different dataset in a project to each other. This allows the correct linkage later, once the dataset have been fully anonymised"^^rdfs:Literal ;
+            rdfs:label "UID Mapping" .
+
+
+###  https://w3id.org/shp#UidMapping2Check
+:UidMapping2Check rdf:type owl:Class ;
+                  rdfs:subClassOf :DataCheck ;
+                  rdfs:comment "It checks whether the UidMapping2-file or table has changed after the original IDs were removed or not, using check values (e.g. “sum check”). It should never change after the original IDs were removed and before the new common UIDs are assigned."^^rdfs:Literal ,
+                               "NOTE: This activity is not yet official implemented into the workflow of the Analysts."^^rdfs:Literal ;
+                  rdfs:label "UID-Mapping-2 Check" .
+
+
+###  https://w3id.org/shp#Update
+:Update rdf:type owl:Class ;
+        rdfs:subClassOf :DashActivity ;
+        rdfs:comment "A document is updated" ;
+        rdfs:label "Update" .
+
+
+###  https://w3id.org/shp#ValidationCheck
+:ValidationCheck rdf:type owl:Class ;
+                 rdfs:subClassOf :DataCheck ;
+                 rdfs:comment "A second DaSH Analyst checks activities to this point. Includes check against requirements and permissions. Validation checks concentrate on technical aspects, whether the coding is correct and that datasets match the Data Linkage Plan. It generates a validation check report."^^rdfs:Literal ;
+                 rdfs:label "Validation Check" .
+
+
+###  https://w3id.org/shp#ValidationCheckReport
+:ValidationCheckReport rdf:type owl:Class ;
+                       rdfs:subClassOf :DashReport ;
+                       rdfs:comment "Report of the results of the validation checks, which indicates if the work of the Lead analyst has passed or failed the validation check."^^rdfs:Literal ;
+                       rdfs:label "Validation Check Report" .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

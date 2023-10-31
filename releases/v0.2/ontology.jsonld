@@ -1,0 +1,1168 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/shp#DataSet"
+    }, {
+      "@id" : "https://w3id.org/shp#UidMapping"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/shp#DataLinkagePlan"
+    }, {
+      "@id" : "https://w3id.org/shp#ProjectIdToStudyIdTable"
+    }, {
+      "@id" : "https://w3id.org/shp#TreProject"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/shp#DataSet"
+    }, {
+      "@id" : "https://w3id.org/shp#ProjectIdToStudyIdTable"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/shp#DataLinkagePlan"
+    }, {
+      "@id" : "https://w3id.org/shp#DataSet"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/shp#DataLinkagePlan"
+    }, {
+      "@id" : "https://w3id.org/shp#DataSet"
+    } ]
+  } ]
+}, {
+  "@id" : "http://creativecommons.org/ns#license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/shp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://creativecommons.org/ns#license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://www.abdn.ac.uk/iahs/people/profiles/jessicabutler"
+  }, {
+    "@id" : "https://www.abdn.ac.uk/ncs/profiles/milan.markovic/"
+  }, {
+    "@id" : "https://www.abdn.ac.uk/people/bernhard.scheliga/"
+  }, {
+    "@id" : "https://www.abdn.ac.uk/people/helen.rowlands/"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "An ontology to describe provenance of data anonymization workflows (i.e., data linkage) in high security research environments such as the Scottish Safe Haven."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@language" : "en",
+    "@value" : "2023-11-01"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@language" : "en",
+    "@value" : "2023-11-01"
+  } ],
+  "http://purl.org/dc/terms/rights" : [ {
+    "@value" : "Copyright 2023 University of Aberdeen"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "The Safe Haven Provenance (SHP) Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "shp"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/shp#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "The SHP Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.w3.org/ns/prov-o-20130430"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#double",
+    "@value" : "0.2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#Analyst",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Analyst is responsible for the validation checks during extraction, pseudonymisation and/or linkage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Analyst"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Person"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#Cohort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "A list of all individual people/items in the cohort. A cohort is often the people being studied, but could also be items such as scans or prescriptions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cohort"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreProjectDocument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#CohortCreation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The cohort is either created by the Lead Analyst or based on the specification provided by the researcher or based on a cohort list provided by the researcher."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cohort Creation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DashReport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reports related to validation checks, disclosure checks and sum checks"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dash Report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DataCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Group of activities that validates the data linkage process for the project and ensure all the necessary permission are in place for the researcher."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Data Check"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DataExtraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The process of extracting data related to the Cohort from datasets according to the specific variables (fields) selected by researchers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Data Extraction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DataLinkagePlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Data Linkage Plan specifies the data flow from data ingress to data egress in the DaSH environment, specifies the Cohort and specifies the datasets required for the research project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Data Linkage Plan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Plan"
+  }, {
+    "@id" : "https://w3id.org/shp#TreProjectDocument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DataSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Is a cohort-based subset of the Database(s) specific to a research project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DataSourceSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Part of Data Specification File that describes the specific Database and corresponding Variables that shoudl be used during the Data Extraction Process."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Data Source Specification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DataSpecificationFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "In the Grampian Data Safe Haven, the data specification file details the specific databases and variables within the database that should be extracted for the project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Data Specification File"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreProjectDocument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DataTransfer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Transfers between different servers in the DaSH environment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Data Transfer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#Database",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A database or data source from which datasets are derived."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DatasetLinkage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Replacing the dataset-specific pseudo-IDs with a common pseudo-ID across all of the project datasets that links together all datasets for a specific project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dataset Linkage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DatasetLinkageIdMapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Linkage file maps the original identifiable ID (e.g. such as CHI) in the respective dataset to a project and dataset specific new UID. In other words, those UIDs are different for each dataset in a project. This is to prevent premature linkage of the data before is has been fully anonymised."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dataset Linkage ID Mapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreProjectDocument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DatasetRelease",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The project-specific data released to a researcher in the trusted research environment for researcher analysis. This consists of datasets (i.e., flat-files of the extracted, pseudonymised and linked data), Data Linkage Plan, Data Specification file, and summary data that are provided to a researcher in their project folder."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dataset Release"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DisclosureCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Aggregate results compiled by the researcher during their analysis of the released data in the Trusted Research Environment, are reviewed by TRE staff to ensure there are no risks of identifying individuals in the released data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Disclosure Check"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#DataCheck"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#DisclosureCheckReport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Report of the results of the disclosure checks, which indicates if the work of the Lead analyst has passed or failed the disclosure check."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Disclosure Check Report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#DashReport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#EntityCharacteristic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A utility concept for referencing specific properties of an Entity. For example, if an entitiy represents a dataset, an EntityChracteristic can capture a collection of summary statistics such as min max values, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Entitiy Characteristic"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#FlatFileCreation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Datasets and Linkage dataset exported from SQL to flat-files"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FlatFileCreation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#IdLinkage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Creating a unique identifier (UID) mapping table for each pseudonymised dataset, which maps the original identifier (non-pseudonymised) of the dataset to the new pseudonymised ID for that dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ID Linkage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#LeadAnalyst",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Lead Analyst is responsible for the whole cohort creation, data extraction, pseudonymisation and data linkage process of the project. Depending on the data safe haven, the analysts may or may not have the right to see and work on the non-anonymized data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lead Analyst"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Person"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#OriginalIdRemoval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Once all datasets for the project have had pseudo-IDs applied and a linkage dataset created, the original IDs are removed from the UID mapping table (a dataset moves from Pre-Release to Release)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Original ID Removal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#ProjectIdAssignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Project IDs are assigned to a project by the Research Coordinator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Project ID Assignment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#ProjectIdToStudyIdTable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This table tracks which Project ID has which Study IDs assigned. Each Project has one Project ID, but can have multiple Study IDs. As each dataset of the project get its own unique Study ID assigned. Project IDs are assigned to a project by the Research Coordinator as soon as a researcher makes contact with the Data Safen Haven and wants to discuss his project idea."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Project ID to Study ID Table"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#Pseudonymization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Techniques that replace, remove or transform information that identifies an individual (e.g. replacing date of birth with age, replacing postcode with a regional classification or demographic marker, replacing NHS number/CHI number with a pseudo-ID number)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pseudonymization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#RequestedVariables",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A collection of variables requested by the researcher and included in the Data Specification File."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Requested Variables"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Collection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#ResearchCoordinator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "In the Grampian Data Safe Haven, Research Coordinators facilitate the use of routinely collected health and population data for research. Research Coordinators also ensure all information governance and information security measures related to research projects, including reviewing project permissions, approved researcher access periods, appropriate training has been undertaken before and during access to the TRE. Research Coordinators support researchers from academic, NHS and industry to design, plan, gather permissions and conduct research involving health and administrative data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Research Coordinator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Person"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#Researcher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A person who carries out academic, scientific or clinical research. Researchers who require a TRE (or SDE/Safe Haven), must have any research project approved by ethical permissions to undertake the research and require enhanced information governance and security training to become approved to access highly-sensitive data within the TRE."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Researcher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Person"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#SelectedVariables",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A collection of Variables that were selected during the extraction process and are contained within a particular dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Selected Variables"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Collection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#SensitiveVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sensitive Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#Variable"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#SignOff",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Senior member of staff reviewed the validated datasets for data integrity and data pseudonymisation. Data signoff has more of an emphasis on validity of extraction, data validation process and aligns with research project ethical permissions. This is a key step prior to data transferring between different servers/environments (e.g. NHS data moving onto University servers, or data on University servers being released to a project folder for a researcher to access."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sign Off"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#DataCheck"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#StatisticalSummary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Give a summary statistic (e.g. mean, max, min etc) of a dataset regardless the data type (e.g. integer, string, character, Boolean etc.)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Statistical Summary"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreProjectDocument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#StudyIdAssignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Update the ProjectID To StudyID Table with a new the ProjectID to StudyID pairs for use in linkage/anonymisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Study ID Assignment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#TechnicalLead",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Has overall responsibilities and does the disclosure checks. They should have the right to access the non-anonymized data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Technical Lead"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Person"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#TreActivity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Activities that happen in the data production within a trusted research environment. For the Grampian Data Safe Haven, this covers all activities in data production, such as Cohort Creation, Data Extraction, Pseudonymisation, Validation Check, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TRE Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Activity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#TreProject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A research project in a trusted research environment (TRE); also known as a secure data environment (SDE) or a Safe Haven.\nIn the Grampian Data Safe Haven (DaSH), projects receive specific ethical approvals for the use of unconsented health and population data for public benefit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TRE Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Bundle"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#TreProjectDocument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Documents that bare some form of importance and information required for the delivery of the TRE project.\nIn the Grampian Data Safe Haven (DaSH), these are the project protocol,  Data Linkage Plan (i.e., a visualisation of the data sources and data flow from the ingress of data to egress of data in the DaSH environment), and Data Specification File (i.e., variables required for the DaSH Project across datasets selected by researchers and used by data analysts to extract data for each project)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TRE Project Document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#UidMapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Unique Identifier mapping file, maps the corresponding UID in the different dataset in a project to each other. This allows the correct linkage later, once the dataset have been fully anonymised"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "UID Mapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreProjectDocument"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#Update",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An activity that generates new version of an asset (e.g., document, dataset, etc.)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Update"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#TreActivity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#ValidationCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "heck of project activities and entities against project requirements and permissions. This involves one or more data Analysts who are involved in data validation checks after the Lead Analyst has built a cohort, extracted and pseudonymised data and/or linked the datasets for a research project. Validation checks concentrate on technical aspects,whether the coding is correct and that datasets match the Data Linkage Plan and Data Specification File. It generates a validation check report."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Validation Check"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#DataCheck"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#ValidationCheckReport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Report of the results of the validation checks, which indicates if the work of the Lead analyst has passed or failed the validation check."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Validation Check Report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/shp#DashReport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#Variable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A data item that captures a characteristic, number, or quantity that can be measured or counted. The data associated with the variable may be different (for example dates, ages, etc.)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#VariableConstraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A constraint (e.g., a date range) that can associated with a specific variable requested by the researcher."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Variable Constraint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#abbreviation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Short name of source database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#Database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "abbreviation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#cohortMembersLinked",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Number of cohort members successfully linked"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#DataSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cohort members linked"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#cohortMembersNotLinked",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Number of cohort members not linked"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#DataSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cohort members not linked"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#cohortMembersWithInvalidLinkageVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Number of eligible cohort members with an incorrect or missing identifier as linkage variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#DataSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cohort members with invalid linkage variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#cohortSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Total number of people in the cohort. This number was either determined by the analyst before the before the data linkage process or was provided by the researcher."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cohort size"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#cohortSpecification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Data linkage Plan: The cohort specification based on the researchers criteria to answer their research question.\n\nDataset: How the Lead Analyst defined the cohort"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cohort specification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#constraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A property linking Data Source Specification with a Variable Constraint related to one of the variables defined in this specification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "constraint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#contact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Point of contact for questions about source database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#Database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#contexualInformationLink",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Web URL or folder path that point to the contextual information of the source data such as e.g. Metadata, variable definition, collection methods etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#Database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contextual information link"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#dataCustodian",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The individual responsible for the safe custody, transfer, storage of the data and database structure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#Database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "data custodian"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#dataSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A property for linking data sources to corresponding data plans."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#DataSpecificationFile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "data source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/shp#DataSourceSpecification"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#dataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A data type associated with some values described by Entity Characteristic or an expected type of values corresponding to specific Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#EntityCharacteristic"
+  }, {
+    "@id" : "https://w3id.org/shp#Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dataType"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#databaseName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Name of source database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#Database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "database name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#extractedDataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "List of all datasets extracted and released into the project folder of the researcher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#DatasetRelease"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "extracted datasets"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#extractedVariables",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "List of variables extracted from the database to form the dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#DataSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "extracted variables"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#fileName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Assigned file name(s) representing the particular entity through the data workflow and provenance trace from data ingress to the release of data to the researcher in their project folder within the TRE."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "file name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#hash",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A hash value of a specific object (e.g., a dataset contained in a file)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hash"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#lastKnownUpdate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "When was the last known update of the database, before it was used to generate the dataset for the research project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#Database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "last known update"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#linkageVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Variable used for linkage to source dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "linkage variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#max_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The maximum value found in the structure represented by the Entity Characteristic. For example, if an entitiy characteristic might represent a subset of numerical entries, dataes, strings in a dataset corresponding to a specific variable. A min value would represent the largest  entry within such subset of entries."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#EntityCharacteristic"
+  }, {
+    "@id" : "https://w3id.org/shp#VariableConstraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "max value"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#minValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The minimum value found in the structure represented by the Entity Characteristic. For example, if an entitiy characteristic might represent a subset of numerical entries, dataes, strings in a dataset corresponding to a specific variable. A min value would represent the smallest  entry within such subset of entries."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#EntityCharacteristic"
+  }, {
+    "@id" : "https://w3id.org/shp#VariableConstraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "min value"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#mostRecentRecordDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Date of the most recent record in database."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#Database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "most recent record date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#notNull",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A number of entries represented by the Entity Characteristic where the value is not null"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#EntityCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "not null"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#notNullPct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A percentage of non-null entries represented by the Entity Characteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#EntityCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "not null pct"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#oldestRecordDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The date and time of the oldest record in the database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#Database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "oldest record date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#projectId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Project IDs are assigned to each project by the Research Coordinator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "project id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#requestedVariables",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A property linking Data Source Specification with the collection containing describtion of variables requested by a researcher."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#DataSourceSpecification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "requested variables"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/shp#RequestedVariables"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#resultOfCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The results of a DataCheck-activity that generated DashReport-Enity. Currently it is recommended that is either has the values “passed” or “failed”."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#DashReport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "result of check"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#rowCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Count of extracted records in a dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#EntityCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "row count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#smallestDistinctNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The smallest value present in a variable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#EntityCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "smallest distinct number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#studyId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "In DaSH, each dataset of a project gets its own unique Study ID assigned. The Study ID is used as a prefix (usually 4 digits) for the pseudo-ID."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "study id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#targetDataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A property linking Entity Characteristic to the particular Dataset it describes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#EntityCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "target dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/shp#DataSet"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#targetFeature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A property linking Entitiy Characteristic or Variable Constraint to a specific variable to indicate that characteristics or constriants described influence this variable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#EntityCharacteristic"
+  }, {
+    "@id" : "https://w3id.org/shp#VariableConstraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "target feature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/shp#Variable"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#uniqueChiCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A number of unique CHI numbers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#EntityCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "unique CHI count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "https://w3id.org/shp#version",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Database version"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/shp#Database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "version"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+} ]
