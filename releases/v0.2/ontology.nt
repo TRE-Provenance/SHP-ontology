@@ -3,6 +3,7 @@
 <https://w3id.org/shp> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/shp> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/iahs/people/profiles/jessicabutler> .
 <https://w3id.org/shp> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/ncs/profiles/milan.markovic/> .
+<https://w3id.org/shp> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/people/katherine.osullivan> .
 <https://w3id.org/shp> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/people/bernhard.scheliga/> .
 <https://w3id.org/shp> <http://purl.org/dc/terms/creator> <https://www.abdn.ac.uk/people/helen.rowlands/> .
 <https://w3id.org/shp> <http://purl.org/dc/terms/description> "An ontology to describe provenance of data anonymization workflows (i.e., data linkage) in high security research environments such as the Scottish Safe Haven."@en .
