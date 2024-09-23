@@ -492,15 +492,6 @@ Dataset: How the Lead Analyst defined the cohort</rdfs:comment>
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/shp#projectId">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/shp#DataLinkagePlan"/>
-                    <rdf:Description rdf:about="https://w3id.org/shp#ProjectIdToStudyIdTable"/>
-                    <rdf:Description rdf:about="https://w3id.org/shp#TreProject"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>Project IDs are assigned to each project by the Research Coordinator.</rdfs:comment>
         <rdfs:label>project id</rdfs:label>
@@ -512,9 +503,9 @@ Dataset: How the Lead Analyst defined the cohort</rdfs:comment>
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/shp#resultOfCheck">
-        <rdfs:domain rdf:resource="https://w3id.org/shp#DashReport"/>
+        <rdfs:domain rdf:resource="https://w3id.org/shp#TreReport"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>The results of a DataCheck-activity that generated DashReport-Enity. Currently it is recommended that is either has the values “passed” or “failed”.</rdfs:comment>
+        <rdfs:comment>The results of a Data Check-activity that generated TRE Report-Enity. Currently it is recommended that is either has the values “passed” or “failed”.</rdfs:comment>
         <rdfs:label>result of check</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -548,14 +539,6 @@ Dataset: How the Lead Analyst defined the cohort</rdfs:comment>
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/shp#studyId">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/shp#DataSet"/>
-                    <rdf:Description rdf:about="https://w3id.org/shp#ProjectIdToStudyIdTable"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
         <rdfs:comment>In DaSH, each dataset of a project gets its own unique Study ID assigned. The Study ID is used as a prefix (usually 4 digits) for the pseudo-ID.</rdfs:comment>
         <rdfs:label>study id</rdfs:label>
@@ -628,17 +611,6 @@ Dataset: How the Lead Analyst defined the cohort</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/shp#TreActivity"/>
         <rdfs:comment>The cohort is either created by the Lead Analyst or based on the specification provided by the researcher or based on a cohort list provided by the researcher.</rdfs:comment>
         <rdfs:label>Cohort Creation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/shp#DashReport -->
-
-
-    <owl:Class rdf:about="https://w3id.org/shp#DashReport">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <rdfs:comment>Reports related to validation checks, disclosure checks and sum checks</rdfs:comment>
-        <rdfs:label>Dash Report</rdfs:label>
     </owl:Class>
     
 
@@ -780,7 +752,7 @@ Dataset: How the Lead Analyst defined the cohort</rdfs:comment>
 
 
     <owl:Class rdf:about="https://w3id.org/shp#DisclosureCheckReport">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/shp#DashReport"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/shp#TreReport"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Report of the results of the disclosure checks, which indicates if the work of the Lead analyst has passed or failed the disclosure check.</rdfs:comment>
         <rdfs:label>Disclosure Check Report</rdfs:label>
     </owl:Class>
@@ -848,17 +820,6 @@ Dataset: How the Lead Analyst defined the cohort</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/shp#TreActivity"/>
         <rdfs:comment>Project IDs are assigned to a project by the Research Coordinator.</rdfs:comment>
         <rdfs:label>Project ID Assignment</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/shp#ProjectIdToStudyIdTable -->
-
-
-    <owl:Class rdf:about="https://w3id.org/shp#ProjectIdToStudyIdTable">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <rdfs:comment>This table tracks which Project ID has which Study IDs assigned. Each Project has one Project ID, but can have multiple Study IDs. As each dataset of the project get its own unique Study ID assigned. Project IDs are assigned to a project by the Research Coordinator as soon as a researcher makes contact with the Data Safen Haven and wants to discuss his project idea.</rdfs:comment>
-        <rdfs:label>Project ID to Study ID Table</rdfs:label>
     </owl:Class>
     
 
@@ -1007,6 +968,17 @@ In the Grampian Data Safe Haven (DaSH), these are the project protocol,  Data Li
     
 
 
+    <!-- https://w3id.org/shp#TreReport -->
+
+
+    <owl:Class rdf:about="https://w3id.org/shp#TreReport">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment>Reports related to validation checks, disclosure checks and sum checks</rdfs:comment>
+        <rdfs:label>TRE Report</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/shp#UidMapping -->
 
 
@@ -1044,7 +1016,7 @@ In the Grampian Data Safe Haven (DaSH), these are the project protocol,  Data Li
 
 
     <owl:Class rdf:about="https://w3id.org/shp#ValidationCheckReport">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/shp#DashReport"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/shp#TreReport"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Report of the results of the validation checks, which indicates if the work of the Lead analyst has passed or failed the validation check.</rdfs:comment>
         <rdfs:label>Validation Check Report</rdfs:label>
     </owl:Class>
@@ -1073,6 +1045,6 @@ In the Grampian Data Safe Haven (DaSH), these are the project protocol,  Data Li
 
 
 
-<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
 
 

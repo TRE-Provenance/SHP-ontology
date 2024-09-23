@@ -134,14 +134,14 @@
 # https://w3id.org/shp#cohortSize
 <https://w3id.org/shp#cohortSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/shp#cohortSize> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#UidMapping> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#UidMapping> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/shp#cohortSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/shp#cohortSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Total number of people in the cohort. This number was either determined by the analyst before the before the data linkage process or was provided by the researcher." .
 <https://w3id.org/shp#cohortSize> <http://www.w3.org/2000/01/rdf-schema#label> "cohort size" .
@@ -149,14 +149,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/shp#cohortSpecification
 <https://w3id.org/shp#cohortSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/shp#cohortSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataLinkagePlan> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataLinkagePlan> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/shp#cohortSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/shp#cohortSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Data linkage Plan: The cohort specification based on the researchers criteria to answer their research question.\n\nDataset: How the Lead Analyst defined the cohort" .
 <https://w3id.org/shp#cohortSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "cohort specification" .
@@ -234,14 +234,14 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/shp#linkageVariable
 <https://w3id.org/shp#linkageVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/shp#linkageVariable> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataLinkagePlan> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataLinkagePlan> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/shp#linkageVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/shp#linkageVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable used for linkage to source dataset" .
 <https://w3id.org/shp#linkageVariable> <http://www.w3.org/2000/01/rdf-schema#label> "linkage variable" .
@@ -290,27 +290,15 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/shp#projectId
 <https://w3id.org/shp#projectId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/shp#projectId> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#TreProject> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#ProjectIdToStudyIdTable> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataLinkagePlan> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/shp#projectId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/shp#projectId> <http://www.w3.org/2000/01/rdf-schema#comment> "Project IDs are assigned to each project by the Research Coordinator." .
 <https://w3id.org/shp#projectId> <http://www.w3.org/2000/01/rdf-schema#label> "project id" .
 # 
 # https://w3id.org/shp#resultOfCheck
 <https://w3id.org/shp#resultOfCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/shp#resultOfCheck> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#DashReport> .
+<https://w3id.org/shp#resultOfCheck> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/shp#TreReport> .
 <https://w3id.org/shp#resultOfCheck> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/shp#resultOfCheck> <http://www.w3.org/2000/01/rdf-schema#comment> "The results of a DataCheck-activity that generated DashReport-Enity. Currently it is recommended that is either has the values “passed” or “failed”." .
+<https://w3id.org/shp#resultOfCheck> <http://www.w3.org/2000/01/rdf-schema#comment> "The results of a Data Check-activity that generated TRE Report-Enity. Currently it is recommended that is either has the values “passed” or “failed”." .
 <https://w3id.org/shp#resultOfCheck> <http://www.w3.org/2000/01/rdf-schema#label> "result of check" .
 # 
 # https://w3id.org/shp#rowCount
@@ -329,15 +317,6 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/shp#studyId
 <https://w3id.org/shp#studyId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/shp#studyId> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
-_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#ProjectIdToStudyIdTable> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/shp#DataSet> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/shp#studyId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/shp#studyId> <http://www.w3.org/2000/01/rdf-schema#comment> "In DaSH, each dataset of a project gets its own unique Study ID assigned. The Study ID is used as a prefix (usually 4 digits) for the pseudo-ID." .
 <https://w3id.org/shp#studyId> <http://www.w3.org/2000/01/rdf-schema#label> "study id" .
@@ -382,12 +361,6 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/shp#CohortCreation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
 <https://w3id.org/shp#CohortCreation> <http://www.w3.org/2000/01/rdf-schema#comment> "The cohort is either created by the Lead Analyst or based on the specification provided by the researcher or based on a cohort list provided by the researcher." .
 <https://w3id.org/shp#CohortCreation> <http://www.w3.org/2000/01/rdf-schema#label> "Cohort Creation" .
-# 
-# https://w3id.org/shp#DashReport
-<https://w3id.org/shp#DashReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/shp#DashReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
-<https://w3id.org/shp#DashReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Reports related to validation checks, disclosure checks and sum checks" .
-<https://w3id.org/shp#DashReport> <http://www.w3.org/2000/01/rdf-schema#label> "Dash Report" .
 # 
 # https://w3id.org/shp#DataCheck
 <https://w3id.org/shp#DataCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -464,7 +437,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/shp#DisclosureCheckReport
 <https://w3id.org/shp#DisclosureCheckReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/shp#DisclosureCheckReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#DashReport> .
+<https://w3id.org/shp#DisclosureCheckReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreReport> .
 <https://w3id.org/shp#DisclosureCheckReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Report of the results of the disclosure checks, which indicates if the work of the Lead analyst has passed or failed the disclosure check."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/shp#DisclosureCheckReport> <http://www.w3.org/2000/01/rdf-schema#label> "Disclosure Check Report" .
 # 
@@ -502,12 +475,6 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/shp#ProjectIdAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreActivity> .
 <https://w3id.org/shp#ProjectIdAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Project IDs are assigned to a project by the Research Coordinator." .
 <https://w3id.org/shp#ProjectIdAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Project ID Assignment" .
-# 
-# https://w3id.org/shp#ProjectIdToStudyIdTable
-<https://w3id.org/shp#ProjectIdToStudyIdTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/shp#ProjectIdToStudyIdTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
-<https://w3id.org/shp#ProjectIdToStudyIdTable> <http://www.w3.org/2000/01/rdf-schema#comment> "This table tracks which Project ID has which Study IDs assigned. Each Project has one Project ID, but can have multiple Study IDs. As each dataset of the project get its own unique Study ID assigned. Project IDs are assigned to a project by the Research Coordinator as soon as a researcher makes contact with the Data Safen Haven and wants to discuss his project idea." .
-<https://w3id.org/shp#ProjectIdToStudyIdTable> <http://www.w3.org/2000/01/rdf-schema#label> "Project ID to Study ID Table" .
 # 
 # https://w3id.org/shp#Pseudonymization
 <https://w3id.org/shp#Pseudonymization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -586,6 +553,12 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/shp#TreProjectDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "Documents that bare some form of importance and information required for the delivery of the TRE project.\nIn the Grampian Data Safe Haven (DaSH), these are the project protocol,  Data Linkage Plan (i.e., a visualisation of the data sources and data flow from the ingress of data to egress of data in the DaSH environment), and Data Specification File (i.e., variables required for the DaSH Project across datasets selected by researchers and used by data analysts to extract data for each project)." .
 <https://w3id.org/shp#TreProjectDocument> <http://www.w3.org/2000/01/rdf-schema#label> "TRE Project Document" .
 # 
+# https://w3id.org/shp#TreReport
+<https://w3id.org/shp#TreReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/shp#TreReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/shp#TreReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Reports related to validation checks, disclosure checks and sum checks" .
+<https://w3id.org/shp#TreReport> <http://www.w3.org/2000/01/rdf-schema#label> "TRE Report" .
+# 
 # https://w3id.org/shp#UidMapping
 <https://w3id.org/shp#UidMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/shp#UidMapping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreProjectDocument> .
@@ -606,7 +579,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/shp#ValidationCheckReport
 <https://w3id.org/shp#ValidationCheckReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/shp#ValidationCheckReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#DashReport> .
+<https://w3id.org/shp#ValidationCheckReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/shp#TreReport> .
 <https://w3id.org/shp#ValidationCheckReport> <http://www.w3.org/2000/01/rdf-schema#comment> "Report of the results of the validation checks, which indicates if the work of the Lead analyst has passed or failed the validation check."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/shp#ValidationCheckReport> <http://www.w3.org/2000/01/rdf-schema#label> "Validation Check Report" .
 # 
@@ -621,4 +594,4 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/shp#VariableConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A constraint (e.g., a date range) that can associated with a specific variable requested by the researcher." .
 <https://w3id.org/shp#VariableConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Variable Constraint" .
 # 
-# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

@@ -9,28 +9,6 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/shp#DataLinkagePlan"
-    }, {
-      "@id" : "https://w3id.org/shp#ProjectIdToStudyIdTable"
-    }, {
-      "@id" : "https://w3id.org/shp#TreProject"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/shp#DataSet"
-    }, {
-      "@id" : "https://w3id.org/shp#ProjectIdToStudyIdTable"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
@@ -166,18 +144,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/shp#TreActivity"
-  } ]
-}, {
-  "@id" : "https://w3id.org/shp#DashReport",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Reports related to validation checks, disclosure checks and sum checks"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Dash Report"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/shp#DataCheck",
@@ -339,7 +305,7 @@
     "@value" : "Disclosure Check Report"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/shp#DashReport"
+    "@id" : "https://w3id.org/shp#TreReport"
   } ]
 }, {
   "@id" : "https://w3id.org/shp#EntityCharacteristic",
@@ -409,18 +375,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/shp#TreActivity"
-  } ]
-}, {
-  "@id" : "https://w3id.org/shp#ProjectIdToStudyIdTable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This table tracks which Project ID has which Study IDs assigned. Each Project has one Project ID, but can have multiple Study IDs. As each dataset of the project get its own unique Study ID assigned. Project IDs are assigned to a project by the Research Coordinator as soon as a researcher makes contact with the Data Safen Haven and wants to discuss his project idea."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Project ID to Study ID Table"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Entity"
   } ]
 }, {
   "@id" : "https://w3id.org/shp#Pseudonymization",
@@ -578,6 +532,18 @@
     "@id" : "http://www.w3.org/ns/prov#Entity"
   } ]
 }, {
+  "@id" : "https://w3id.org/shp#TreReport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reports related to validation checks, disclosure checks and sum checks"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TRE Report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
   "@id" : "https://w3id.org/shp#UidMapping",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -626,7 +592,7 @@
     "@value" : "Validation Check Report"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/shp#DashReport"
+    "@id" : "https://w3id.org/shp#TreReport"
   } ]
 }, {
   "@id" : "https://w3id.org/shp#Variable",
@@ -1021,9 +987,6 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Project IDs are assigned to each project by the Research Coordinator."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid10"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "project id"
   } ],
@@ -1049,10 +1012,10 @@
   "@id" : "https://w3id.org/shp#resultOfCheck",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The results of a DataCheck-activity that generated DashReport-Enity. Currently it is recommended that is either has the values “passed” or “failed”."
+    "@value" : "The results of a Data Check-activity that generated TRE Report-Enity. Currently it is recommended that is either has the values “passed” or “failed”."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/shp#DashReport"
+    "@id" : "https://w3id.org/shp#TreReport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "result of check"
@@ -1095,9 +1058,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "In DaSH, each dataset of a project gets its own unique Study ID assigned. The Study ID is used as a prefix (usually 4 digits) for the pseudo-ID."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "study id"

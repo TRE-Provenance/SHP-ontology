@@ -4,7 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/shp#> .
+@base <https://w3id.org/shp> .
 
 <https://w3id.org/shp> rdf:type owl:Ontology ;
                         owl:imports <http://www.w3.org/ns/prov-o-20130430> ;
@@ -311,12 +311,6 @@ Dataset: How the Lead Analyst defined the cohort""" ;
 
 ###  https://w3id.org/shp#projectId
 :projectId rdf:type owl:DatatypeProperty ;
-           rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :DataLinkagePlan
-                                       :ProjectIdToStudyIdTable
-                                       :TreProject
-                                     )
-                       ] ;
            rdfs:range rdfs:Literal ;
            rdfs:comment "Project IDs are assigned to each project by the Research Coordinator." ;
            rdfs:label "project id" .
@@ -324,9 +318,9 @@ Dataset: How the Lead Analyst defined the cohort""" ;
 
 ###  https://w3id.org/shp#resultOfCheck
 :resultOfCheck rdf:type owl:DatatypeProperty ;
-               rdfs:domain :DashReport ;
+               rdfs:domain :TreReport ;
                rdfs:range rdfs:Literal ;
-               rdfs:comment "The results of a DataCheck-activity that generated DashReport-Enity. Currently it is recommended that is either has the values “passed” or “failed”." ;
+               rdfs:comment "The results of a Data Check-activity that generated TRE Report-Enity. Currently it is recommended that is either has the values “passed” or “failed”." ;
                rdfs:label "result of check" .
 
 
@@ -348,11 +342,6 @@ Dataset: How the Lead Analyst defined the cohort""" ;
 
 ###  https://w3id.org/shp#studyId
 :studyId rdf:type owl:DatatypeProperty ;
-         rdfs:domain [ rdf:type owl:Class ;
-                       owl:unionOf ( :DataSet
-                                     :ProjectIdToStudyIdTable
-                                   )
-                     ] ;
          rdfs:range xsd:nonNegativeInteger ;
          rdfs:comment "In DaSH, each dataset of a project gets its own unique Study ID assigned. The Study ID is used as a prefix (usually 4 digits) for the pseudo-ID." ;
          rdfs:label "study id" .
@@ -397,13 +386,6 @@ Dataset: How the Lead Analyst defined the cohort""" ;
                 rdfs:subClassOf :TreActivity ;
                 rdfs:comment "The cohort is either created by the Lead Analyst or based on the specification provided by the researcher or based on a cohort list provided by the researcher." ;
                 rdfs:label "Cohort Creation" .
-
-
-###  https://w3id.org/shp#DashReport
-:DashReport rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
-            rdfs:comment "Reports related to validation checks, disclosure checks and sum checks" ;
-            rdfs:label "Dash Report" .
 
 
 ###  https://w3id.org/shp#DataCheck
@@ -493,7 +475,7 @@ Dataset: How the Lead Analyst defined the cohort""" ;
 
 ###  https://w3id.org/shp#DisclosureCheckReport
 :DisclosureCheckReport rdf:type owl:Class ;
-                       rdfs:subClassOf :DashReport ;
+                       rdfs:subClassOf :TreReport ;
                        rdfs:comment "Report of the results of the disclosure checks, which indicates if the work of the Lead analyst has passed or failed the disclosure check."^^rdfs:Literal ;
                        rdfs:label "Disclosure Check Report" .
 
@@ -537,13 +519,6 @@ Dataset: How the Lead Analyst defined the cohort""" ;
                      rdfs:subClassOf :TreActivity ;
                      rdfs:comment "Project IDs are assigned to a project by the Research Coordinator." ;
                      rdfs:label "Project ID Assignment" .
-
-
-###  https://w3id.org/shp#ProjectIdToStudyIdTable
-:ProjectIdToStudyIdTable rdf:type owl:Class ;
-                         rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
-                         rdfs:comment "This table tracks which Project ID has which Study IDs assigned. Each Project has one Project ID, but can have multiple Study IDs. As each dataset of the project get its own unique Study ID assigned. Project IDs are assigned to a project by the Research Coordinator as soon as a researcher makes contact with the Data Safen Haven and wants to discuss his project idea." ;
-                         rdfs:label "Project ID to Study ID Table" .
 
 
 ###  https://w3id.org/shp#Pseudonymization
@@ -638,6 +613,13 @@ In the Grampian Data Safe Haven (DaSH), these are the project protocol,  Data Li
                     rdfs:label "TRE Project Document" .
 
 
+###  https://w3id.org/shp#TreReport
+:TreReport rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+           rdfs:comment "Reports related to validation checks, disclosure checks and sum checks" ;
+           rdfs:label "TRE Report" .
+
+
 ###  https://w3id.org/shp#UidMapping
 :UidMapping rdf:type owl:Class ;
             rdfs:subClassOf :TreProjectDocument ;
@@ -661,7 +643,7 @@ In the Grampian Data Safe Haven (DaSH), these are the project protocol,  Data Li
 
 ###  https://w3id.org/shp#ValidationCheckReport
 :ValidationCheckReport rdf:type owl:Class ;
-                       rdfs:subClassOf :DashReport ;
+                       rdfs:subClassOf :TreReport ;
                        rdfs:comment "Report of the results of the validation checks, which indicates if the work of the Lead analyst has passed or failed the validation check."^^rdfs:Literal ;
                        rdfs:label "Validation Check Report" .
 
@@ -679,4 +661,4 @@ In the Grampian Data Safe Haven (DaSH), these are the project protocol,  Data Li
                     rdfs:label "Variable Constraint" .
 
 
-###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
